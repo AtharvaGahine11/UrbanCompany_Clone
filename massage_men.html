@@ -1,0 +1,1026 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Massage for Men - Urban Company Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      padding: 40px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 24px;
+      gap: 8px;
+    }
+
+    .rating-icon {
+      color: #7f3df0;
+      font-size: 18px;
+    }
+
+    .select-box {
+  max-width: 550px;
+ 
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.select-box h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.service-item {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  background-color: #eee;
+}
+
+.image-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .select-box {
+    padding: 16px;
+  }
+
+  .image-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-item p {
+    font-size: 13px;
+  }
+}
+
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.uc-box {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.brand {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.location-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  min-width: 200px;
+  gap: 8px;
+  color: #555;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  flex-grow: 1;
+  max-width: 600px;
+  gap: 8px;
+  color: #555;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.left-panel {
+  flex: 1;
+}
+
+.right-panel {
+  flex: 1;
+}
+
+.promo-banner {
+  background-color: #f3dce6;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.promo-text .tag {
+  background-color: #555;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.promo-text h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.promo-image {
+  max-width: 40%;
+}
+
+.promo-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+.main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .left-panel {
+      width: 45%;
+    }
+
+    .right-panel {
+      width: 50%;
+    }
+
+    .left-panel h1 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .star {
+      color: gold;
+      font-size: 18px;
+    }
+
+    .service-card {
+      margin-top: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 20px 30px;
+    }
+
+    .service-card h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 120px);
+      gap: 20px;
+    }
+
+    .service {
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .service img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .promo-banner {
+      background-color: #ebd3dc;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .promo-text {
+      max-width: 60%;
+    }
+
+    .promo-text .tag {
+      background-color: #555;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .promo-text h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .promo-text p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .promo-image {
+      max-width: 30%;
+    }
+
+    .promo-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    body {
+      background-color: #fafafa;
+      padding: 40px;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .left-panel {
+      flex: 2;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .package {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .package-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .rating {
+      font-size: 14px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rating .star {
+      color: #6200ea;
+      font-size: 16px;
+    }
+
+    .price {
+      font-size: 16px;
+      margin-top: 8px;
+      color: #111;
+    }
+
+    .price del {
+      color: gray;
+      margin: 0 6px;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .details {
+      font-size: 15px;
+      margin: 12px 0;
+    }
+
+    .details li {
+      margin-bottom: 6px;
+    }
+
+    .package button {
+      padding: 8px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .add-btn {
+      background: #f3edff;
+      color: #6200ea;
+      border: none;
+      border-radius: 12px;
+      padding: 6px 16px;
+      font-weight: 600;
+    }
+
+    .side-card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .side-card img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .side-card h4 {
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .offer-box {
+      text-align: left;
+    }
+
+    .offer-box p {
+      margin: 8px 0;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .offer-box small {
+      color: gray;
+    }
+
+    .offer-box a {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #6200ea;
+      text-decoration: none;
+    }
+
+    .uc-promise {
+      text-align: left;
+    }
+
+    .uc-promise ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .uc-promise li {
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .uc-promise li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    .uc-promise img {
+      width: 60px;
+      float: right;
+    }
+
+
+.footer {
+  background-color: #f9f9f9;
+  color: #1c1c1c;
+  border-top: 1px solid #e5e5e5;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.footer-column ul li:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+
+.store-buttons img {
+  height: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-bottom {
+  text-align: left;
+  font-size: 14px;
+  color: #777;
+  max-width: 1300px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.packages-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.package {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+.package.bestseller h3::after {
+  content: "BESTSELLER";
+  display: inline-block;
+  margin-left: 10px;
+  background: #ffd700;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.package-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.package h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.pressure {
+  background: #eee;
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.duration {
+  font-size: 13px;
+  color: #555;
+}
+
+.price {
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.price del {
+  color: #888;
+  margin-left: 8px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.features,
+.details {
+  margin: 8px 0;
+  padding-left: 16px;
+  font-size: 14px;
+}
+
+.features li,
+.details li {
+  margin-bottom: 4px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.view-details {
+  font-size: 14px;
+  color: #6200ea;
+  text-decoration: none;
+}
+
+.add-btn {
+  background: none;
+  border: 1px solid #6200ea;
+  color: #6200ea;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+  </style>
+</head>
+
+ 
+
+<body>
+    <div class="navbar">
+      <div class="logo">
+        <div class="uc-box">UC</div>
+        <span class="brand">Urban<br />Company</span>
+      </div>
+      <div class="location-box">
+        <span class="icon">📍</span>
+        <span id="location-text">Dadar, Mumbai</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Search in Salon Prime" id="search-input" />
+      </div>
+    </div>
+  
+    <br><br>
+  
+    <div class="main-container">
+      <div class="left-panel">
+        <h1>Massage for Men</h1>
+        <div class="rating">
+          <span class="rating-icon">⭐</span>
+          <span>4.85 (14.4 M bookings)</span>
+        </div>
+  
+        <div class="select-box">
+          <h2>Select a service</h2>
+          <div class="service-grid">
+            <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="post.webp" alt="Packages" />
+                </div>
+                <p>Post Workout</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="stress.webp" alt="Waxing" />
+                </div>
+                <p>Stress relief</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="pain.webp" alt="Threading" />
+                </div>
+                <p>Pain relief</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="add.webp" alt="Manicure" />
+                </div>
+                <p>Add-ons</p>
+              </div>
+             
+          </div>
+        </div>
+       
+      </div>
+  
+      <div class="right-panel">
+          <div class="img00">
+            <img src="1698216827166-bc6957.webp" width="700px" height="300px">
+           </div> 
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      document.querySelector('.location-box').addEventListener('click', () => {
+        alert("Location dropdown could appear here.");
+      });
+    </script>
+
+
+       
+  <div class="container">
+   
+    <div class="left-panel">
+        <br><br>
+        <h2 style="margin-bottom: 20px;">Packages</h2>
+
+        <div class="packages-section">
+          <!-- Back Pain Relief Massage -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Back pain relief massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">40 mins</span>
+            </div>
+            <div class="price">₹849</div>
+            <div class="rating">4.88 (11K reviews)</div>
+            <p class="desc">Customised massage with natural oils to alleviate soreness</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Leg Pain Relief Massage -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Leg pain relief massage for men</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">40 mins</span>
+            </div>
+            <div class="price">₹849</div>
+            <div class="rating">4.88 (11K reviews)</div>
+            <p class="desc">Customised massage with natural oils to alleviate soreness</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Deep Tissue Pain Relief -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Deep tissue pain relief massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">Starts at ₹1,399</span>
+            </div>
+            <div class="rating">4.86 (79K reviews)</div>
+            <p class="desc">High-pressure palm movements to relieve muscle tension & soreness</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Deep Tissue with Head, Neck & Shoulder -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Deep tissue with head, neck & shoulder massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">1 hr 40 mins</span>
+            </div>
+            <div class="price">₹1,948 <del>₹2,448</del></div>
+            <div class="rating">4.87 (89K reviews)</div>
+            <ul class="features">
+              <li>60 mins high-pressure massage</li>
+              <li>40 mins medium-pressure head, neck & shoulder massage</li>
+            </ul>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Top-to-Toe Stress Relief Massage -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Top-to-toe stress relief massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">1 hr 40 mins</span>
+            </div>
+            <div class="price">₹1,949</div>
+            <div class="rating">4.86 (23K reviews)</div>
+            <p class="desc">Full-body massage with scalp care & 20 mins foot reflexology</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Holistic De-Stress Massage -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Holistic de-stress massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">1 hr 20 mins</span>
+            </div>
+            <div class="price">₹1,549</div>
+            <div class="rating">4.86 (10K reviews)</div>
+            <p class="desc">Medium-pressure massage with focus on head, neck & shoulder</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Swedish Stress Relief Massage -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Swedish stress relief massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">Starts at ₹1,298</span>
+            </div>
+            <div class="rating">4.85 (76K reviews)</div>
+            <p class="desc">Medium-pressure massage to improve overall blood circulation</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Hectic Day Care Stress Relief -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Hectic day care stress relief massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">45 mins</span>
+            </div>
+            <div class="price">₹899</div>
+            <div class="rating">4.84 (12K reviews)</div>
+            <p class="desc">Medium-pressure head, neck, shoulder & foot massage</p>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        
+          <!-- Swedish & Foot Massage -->
+          <div class="package">
+            <div class="package-header">
+              <h3>Swedish & foot massage</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="meta">
+              <span class="duration">1 hr 25 mins</span>
+            </div>
+            <div class="price">₹1,747 <del>₹1,947</del></div>
+            <div class="rating">4.87 (39K reviews)</div>
+            <ul class="features">
+              <li>60 mins medium-pressure full body massage</li>
+              <li>25 mins foot massage to soothe feet</li>
+            </ul>
+            <a href="#" class="view-details">View details</a>
+          </div>
+        </div>
+        
+    </div>
+
+   <br><br>
+    <div class="right-panel">
+      <div class="side-card">
+        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/null/external-cart-supermarket-flatart-icons-outline-flatarticons.png" />
+        <h4>No items in your cart</h4>
+      </div>
+
+      <div class="side-card offer-box">
+        <p>Up to ₹150 Cashback</p>
+        <small>Valid for Paytm UPI only</small><br />
+        <a href="#">View More Offers ⌄</a>
+      </div>
+
+      <div class="side-card uc-promise">
+        <h4>UC Promise</h4>
+        <ul>
+          <li>4.5+ Rated Beauticians</li>
+          <li>Luxury Salon Experience</li>
+          <li>Premium Branded Products</li>
+        </ul>
+        <img src="1702985608819-4a9ba6.webp" alt="Quality Assured Badge" />
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="Screenshot 2025-06-07 at 10.24.55 AM.png" alt="Urban Company Logo">
+      </div>
+      <div class="footer-sections">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li>About us</li>
+            <li>Investor Relations</li>
+            <li>Terms & conditions</li>
+            <li>Privacy policy</li>
+            <li>Anti-discrimination policy</li>
+            <li>ESG Impact</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>For customers</h4>
+          <ul>
+            <li>UC reviews</li>
+            <li>Categories near you</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>For professionals</h4>
+          <ul>
+            <li>Register as a professional</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Social links</h4>
+          <div class="social-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+          </div>
+          <div class="store-buttons">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>* As on December 31, 2024</p>
+      <p>© Copyright 2025 Urban Company Ltd. (formerly known as UrbanClap Technologies India Limited and UrbanClap Technologies India India Limited) All rights reserved. | CIN: U74140DL2014PTC274413</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+

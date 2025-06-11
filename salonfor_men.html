@@ -1,0 +1,1045 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men Salon Prime - Urban Company Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      padding: 40px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 24px;
+      gap: 8px;
+    }
+
+    .rating-icon {
+      color: #7f3df0;
+      font-size: 18px;
+    }
+
+    .select-box {
+  max-width: 550px;
+ 
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.select-box h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.service-item {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  background-color: #eee;
+}
+
+.image-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .select-box {
+    padding: 16px;
+  }
+
+  .image-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-item p {
+    font-size: 13px;
+  }
+}
+
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.uc-box {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.brand {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.location-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  min-width: 200px;
+  gap: 8px;
+  color: #555;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  flex-grow: 1;
+  max-width: 600px;
+  gap: 8px;
+  color: #555;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.left-panel {
+  flex: 1;
+}
+
+.right-panel {
+  flex: 1;
+}
+
+.promo-banner {
+  background-color: #f3dce6;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.promo-text .tag {
+  background-color: #555;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.promo-text h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.promo-image {
+  max-width: 40%;
+}
+
+.promo-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+.main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .left-panel {
+      width: 45%;
+    }
+
+    .right-panel {
+      width: 50%;
+    }
+
+    .left-panel h1 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .star {
+      color: gold;
+      font-size: 18px;
+    }
+
+    .service-card {
+      margin-top: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 20px 30px;
+    }
+
+    .service-card h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 120px);
+      gap: 20px;
+    }
+
+    .service {
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .service img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .promo-banner {
+      background-color: #ebd3dc;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .promo-text {
+      max-width: 60%;
+    }
+
+    .promo-text .tag {
+      background-color: #555;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .promo-text h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .promo-text p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .promo-image {
+      max-width: 30%;
+    }
+
+    .promo-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    body {
+      background-color: #fafafa;
+      padding: 40px;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .left-panel {
+      flex: 2;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .package {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .package-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .rating {
+      font-size: 14px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rating .star {
+      color: #6200ea;
+      font-size: 16px;
+    }
+
+    .price {
+      font-size: 16px;
+      margin-top: 8px;
+      color: #111;
+    }
+
+    .price del {
+      color: gray;
+      margin: 0 6px;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .details {
+      font-size: 15px;
+      margin: 12px 0;
+    }
+
+    .details li {
+      margin-bottom: 6px;
+    }
+
+    .package button {
+      padding: 8px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .add-btn {
+      background: #f3edff;
+      color: #6200ea;
+      border: none;
+      border-radius: 12px;
+      padding: 6px 16px;
+      font-weight: 600;
+    }
+
+    .side-card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .side-card img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .side-card h4 {
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .offer-box {
+      text-align: left;
+    }
+
+    .offer-box p {
+      margin: 8px 0;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .offer-box small {
+      color: gray;
+    }
+
+    .offer-box a {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #6200ea;
+      text-decoration: none;
+    }
+
+    .uc-promise {
+      text-align: left;
+    }
+
+    .uc-promise ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .uc-promise li {
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .uc-promise li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    .uc-promise img {
+      width: 60px;
+      float: right;
+    }
+
+
+.footer {
+  background-color: #f9f9f9;
+  color: #1c1c1c;
+  border-top: 1px solid #e5e5e5;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.footer-column ul li:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+
+.store-buttons img {
+  height: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-bottom {
+  text-align: left;
+  font-size: 14px;
+  color: #777;
+  max-width: 1300px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+
+.packages-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.package-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.package-header .tag {
+  font-size: 12px;
+  color: green;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.package-header h3 {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.price del {
+  color: #888;
+  margin-left: 8px;
+}
+
+.details {
+  font-size: 14px;
+  margin: 8px 0;
+  padding-left: 16px;
+}
+
+.details li {
+  margin-bottom: 4px;
+}
+
+.edit-btn {
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+ 
+
+<body>
+    <div class="navbar">
+      <div class="logo">
+        <div class="uc-box">UC</div>
+        <span class="brand">Urban<br />Company</span>
+      </div>
+      <div class="location-box">
+        <span class="icon">📍</span>
+        <span id="location-text">Dadar, Mumbai</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Search in Salon Prime" id="search-input" />
+      </div>
+    </div>
+  
+    <br><br>
+  
+    <div class="main-container">
+      <div class="left-panel">
+        <h1>Men Salon Prime</h1>
+        <div class="rating">
+          <span class="rating-icon">⭐</span>
+          <span>4.85 (14.4 M bookings)</span>
+        </div>
+  
+        <div class="select-box">
+          <h2>Select a service</h2>
+          <div class="service-grid">
+            <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1737460315794-1afa9e.webp" alt="Packages" />
+                </div>
+                <p>Packages</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1677500791008-17f24c.webp" alt="Shave/Beard" />
+                </div>
+                <p>Shave/Beard</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1677500817490-776565.webp" alt="Threading" />
+                </div>
+                <p> Face Care</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1676984688853-f74086.webp" alt="Facial" />
+                </div>
+                <p>Hair Care</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1677500814226-f9cdea.webp" alt="Manicure" />
+                </div>
+                <p>Hair Color</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1731064827675-155143.webp" alt="Pedicure" />
+                </div>
+                <p>Pedicure</p>
+              </div>
+              <div class="service-item">
+                <div class="image-wrapper">
+                  <img src="1677500806118-4b2387.webp" alt="Hair care" />
+                </div>
+                <p>Massage</p>
+              </div>
+          </div>
+        </div>
+       
+      </div>
+  
+      <div class="right-panel">
+          <div class="img00">
+            <img src="1707913725636-f583ad.webp" width="700px" height="400px">
+           </div> 
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      document.querySelector('.location-box').addEventListener('click', () => {
+        alert("Location dropdown could appear here.");
+      });
+    </script>
+
+
+       
+  <div class="container">
+   
+    <div class="left-panel">
+        <br><br>
+        <h2 style="margin-bottom:20px">Packages</h2>
+
+        <div class="packages-section">
+          <!-- Grooming essentials -->
+          <div class="package">
+            <div class="package-header">
+              <span class="tag">PACKAGE</span>
+              <h3>Grooming essentials</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="rating">⭐ 4.92 (229K reviews) • 1 hr 30 mins</div>
+            <div class="price">₹947 <del>₹997</del></div>
+            <ul class="details">
+              <li><strong>Haircut:</strong> Haircut for men</li>
+              <li><strong>Shave/beard grooming:</strong> Beard trimming & styling</li>
+              <li><strong>Massage:</strong> 15 mins head massage</li>
+            </ul>
+            <button class="edit-btn">Edit your package</button>
+          </div>
+        
+          <!-- Face first -->
+<div class="package">
+    <div class="package-header">
+      <span class="tag">PACKAGE</span>
+      <h3>Face first</h3>
+      <button class="add-btn">Add</button>
+    </div>
+    <div class="rating">⭐ 4.88 (124K reviews) • 1 hr 30 mins</div>
+    <div class="price">₹1,798 <del>₹1,848</del></div>
+    <ul class="details">
+      <li><strong>Face clean-up:</strong> O3+ face cleanup</li>
+      <li><strong>Detan:</strong> Face & neck detan</li>
+      <li><strong>Beard grooming:</strong> Trimming & shaping</li>
+    </ul>
+    <button class="edit-btn">Edit your package</button>
+  </div>
+  
+  <!-- Beard boss -->
+  <div class="package">
+    <div class="package-header">
+      <span class="tag">PACKAGE</span>
+      <h3>Beard boss</h3>
+      <button class="add-btn">Add</button>
+    </div>
+    <div class="rating">⭐ 4.90 (98K reviews) • 45 mins</div>
+    <div class="price">₹547 <del>₹597</del></div>
+    <ul class="details">
+      <li><strong>Beard styling:</strong> Detailed beard grooming</li>
+      <li><strong>Shave:</strong> Precision shave</li>
+      <li><strong>Massage:</strong> 10 mins face massage</li>
+    </ul>
+    <button class="edit-btn">Edit your package</button>
+  </div>
+  
+  <!-- King’s retreat -->
+  <div class="package">
+    <div class="package-header">
+      <span class="tag">PACKAGE</span>
+      <h3>King’s retreat</h3>
+      <button class="add-btn">Add</button>
+    </div>
+    <div class="rating">⭐ 4.95 (210K reviews) • 2 hrs 30 mins</div>
+    <div class="price">₹3,198 <del>₹3,298</del></div>
+    <ul class="details">
+      <li><strong>Haircut:</strong> Royal haircut</li>
+      <li><strong>Massage:</strong> 30 mins head & face massage</li>
+      <li><strong>Facial:</strong> Premium gold facial</li>
+    </ul>
+    <button class="edit-btn">Edit your package</button>
+  </div>
+  
+  <!-- Dapper express -->
+  <div class="package">
+    <div class="package-header">
+      <span class="tag">PACKAGE</span>
+      <h3>Dapper express</h3>
+      <button class="add-btn">Add</button>
+    </div>
+    <div class="rating">⭐ 4.86 (90K reviews) • 45 mins</div>
+    <div class="price">₹647 <del>₹697</del></div>
+    <ul class="details">
+      <li><strong>Haircut:</strong> Quick haircut</li>
+      <li><strong>Beard trim:</strong> Basic grooming</li>
+      <li><strong>Styling:</strong> Hair styling with gel</li>
+    </ul>
+    <button class="edit-btn">Edit your package</button>
+  </div>
+  
+  <!-- The works -->
+  <div class="package">
+    <div class="package-header">
+      <span class="tag">PACKAGE</span>
+      <h3>The works</h3>
+      <button class="add-btn">Add</button>
+    </div>
+    <div class="rating">⭐ 4.93 (255K reviews) • 2 hrs 45 mins</div>
+    <div class="price">₹3,497 <del>₹3,597</del></div>
+    <ul class="details">
+      <li><strong>Haircut:</strong> Precision cut</li>
+      <li><strong>Facial:</strong> Brightening facial</li>
+      <li><strong>Massage:</strong> Head & shoulder massage</li>
+      <li><strong>Pedicure:</strong> Deluxe pedicure</li>
+    </ul>
+    <button class="edit-btn">Edit your package</button>
+  </div>
+  
+  <!-- Summer cool -->
+  <div class="package">
+    <div class="package-header">
+      <span class="tag">PACKAGE</span>
+      <h3>Summer cool</h3>
+      <button class="add-btn">Add</button>
+    </div>
+    <div class="rating">⭐ 4.89 (143K reviews) • 1 hr 15 mins</div>
+    <div class="price">₹1,198 <del>₹1,248</del></div>
+    <ul class="details">
+      <li><strong>Hair spa:</strong> Cooling mint spa</li>
+      <li><strong>Face pack:</strong> Clay detox pack</li>
+      <li><strong>Massage:</strong> Cooling head massage</li>
+    </ul>
+    <button class="edit-btn">Edit your package</button>
+  </div>
+  
+
+          <!-- Complete care -->
+          <div class="package">
+            <div class="package-header">
+              <span class="tag">PACKAGE</span>
+              <h3>Complete care</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="rating">⭐ 4.92 (192K reviews) • 1 hr 45 mins</div>
+            <div class="price">₹1,447 <del>₹1,457</del></div>
+            <ul class="details">
+              <li><strong>Haircut:</strong> Haircut for men</li>
+              <li><strong>Shave/beard grooming:</strong> Beard trimming & styling</li>
+              <li><strong>Detan (O3+):</strong> Face & neck detan</li>
+            </ul>
+            <button class="edit-btn">Edit your package</button>
+          </div>
+        
+          <!-- Glow getter -->
+          <div class="package">
+            <div class="package-header">
+              <span class="tag">PACKAGE</span>
+              <h3>Glow getter</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="rating">⭐ 4.91 (196K reviews) • 2 hrs 15 mins</div>
+            <div class="price">₹2,798 <del>₹2,858</del></div>
+            <ul class="details">
+              <li><strong>Face care:</strong> Repechage skin brightening facial</li>
+              <li><strong>Shave/beard grooming:</strong> Beard trimming & styling</li>
+              <li><strong>Haircut:</strong> Haircut for men</li>
+            </ul>
+            <button class="edit-btn">Edit your package</button>
+          </div>
+        
+          <!-- Haircut & color -->
+          <div class="package">
+            <div class="package-header">
+              <span class="tag">PACKAGE</span>
+              <h3>Haircut & color</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="rating">⭐ 4.91 (138K reviews) • 1 hr 15 mins</div>
+            <div class="price">₹1,058 <del>₹1,208</del></div>
+            <ul class="details">
+              <li><strong>Haircut:</strong> Haircut for men</li>
+              <li><strong>Inoa colors (L'Oreal):</strong> Dark brown (shade 3)</li>
+            </ul>
+            <button class="edit-btn">Edit your package</button>
+          </div>
+        
+          <!-- Feet care & beyond -->
+          <div class="package">
+            <div class="package-header">
+              <span class="tag">PACKAGE</span>
+              <h3>Feet care & beyond</h3>
+              <button class="add-btn">Add</button>
+            </div>
+            <div class="rating">⭐ 4.91 (172K reviews) • 2 hrs 15 mins</div>
+            <div class="price">₹1,977 <del>₹2,027</del></div>
+            <ul class="details">
+              <li><strong>Haircut:</strong> Haircut for men</li>
+              <li><strong>Massage:</strong> 15 mins head massage</li>
+              <li><strong>Pedicure:</strong> Aroma bomb pedicure</li>
+            </ul>
+            <button class="edit-btn">Edit your package</button>
+          </div>
+        </div>
+        
+    </div>
+
+   <br><br>
+    <div class="right-panel">
+      <div class="side-card">
+        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/null/external-cart-supermarket-flatart-icons-outline-flatarticons.png" />
+        <h4>No items in your cart</h4>
+      </div>
+
+      <div class="side-card offer-box">
+        <p>Up to ₹150 Cashback</p>
+        <small>Valid for Paytm UPI only</small><br />
+        <a href="#">View More Offers ⌄</a>
+      </div>
+
+      <div class="side-card uc-promise">
+        <h4>UC Promise</h4>
+        <ul>
+          <li>4.5+ Rated Beauticians</li>
+          <li>Luxury Salon Experience</li>
+          <li>Premium Branded Products</li>
+        </ul>
+        <img src="1702985608819-4a9ba6.webp" alt="Quality Assured Badge" />
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="Screenshot 2025-06-07 at 10.24.55 AM.png" alt="Urban Company Logo">
+      </div>
+      <div class="footer-sections">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li>About us</li>
+            <li>Investor Relations</li>
+            <li>Terms & conditions</li>
+            <li>Privacy policy</li>
+            <li>Anti-discrimination policy</li>
+            <li>ESG Impact</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>For customers</h4>
+          <ul>
+            <li>UC reviews</li>
+            <li>Categories near you</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>For professionals</h4>
+          <ul>
+            <li>Register as a professional</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Social links</h4>
+          <div class="social-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+          </div>
+          <div class="store-buttons">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>* As on December 31, 2024</p>
+      <p>© Copyright 2025 Urban Company Ltd. (formerly known as UrbanClap Technologies India Limited and UrbanClap Technologies India India Limited) All rights reserved. | CIN: U74140DL2014PTC274413</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
