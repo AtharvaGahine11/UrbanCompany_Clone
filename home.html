@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Company Loading</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .loader-container {
+      text-align: center;
+    }
+
+    .uc-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .uc-logo span {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      width: 100px;
+      height: 3px;
+      margin: 20px auto;
+      background-color: #eee;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar::before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      background-color: #6c63ff; /* Light blue like original */
+      animation: slide 1s infinite ease-in-out;
+    }
+    a {
+  text-decoration: none;
+  color: inherit;
+}
+    @keyframes slide {
+      0% { left: -30%; }
+      50% { left: 50%; }
+      100% { left: 100%; }
+    }
+  </style>
+</head>
+<body>
+    <a href="login.html">  <div class="loader-container">
+     <div class="uc-logo">
+   <span>UC</span> Urban Company 
+    </div>
+    <div class="progress-bar"></div>
+  </div> </a>
+</body>
+<script>
+    setTimeout(() => {
+      window.location.href = "home.html"; // Replace with your actual home page
+    }, 2500); // 2.5 seconds
+  </script>
+  
+</html>
