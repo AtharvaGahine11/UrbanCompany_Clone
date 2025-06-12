@@ -1,598 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Urban Company Clone</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Company Loading</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-  
+    .loader-container {
+      text-align: center;
+    }
+
+    .uc-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .uc-logo span {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      width: 100px;
+      height: 3px;
+      margin: 20px auto;
+      background-color: #eee;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar::before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      background-color: #6c63ff; /* Light blue like original */
+      animation: slide 1s infinite ease-in-out;
+    }
+    a {
+  text-decoration: none;
+  color: inherit;
+}
+    @keyframes slide {
+      0% { left: -30%; }
+      50% { left: 50%; }
+      100% { left: 100%; }
+    }
+  </style>
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="left-section">
-      <img src="Screenshot 2025-06-07 at 10.24.55 AM.png" alt="UC" class="logo" />
-      
-
-      <div class="nav-links">
-        <span class="link active">Beauty</span>
-        <span class="link">Wall Panels</span>
-        <span class="link">Nation</span>
-      </div>
+    <a href="login.html">  <div class="loader-container">
+     <div class="uc-logo">
+   <span>UC</span> Urban Company 
     </div>
-
-    <div class="right-section">
-      <div class="location-box">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Dadar, Mumbai</span>
-        <i class="fas fa-chevron-down"></i>
-      </div>
-
-      <div class="search-box">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search for ‘Waxing’" />
-      </div>
-
-      <i class="fas fa-shopping-cart icon"></i>
-      <i class="fa-solid fa-user" style="color: #000000;"></i>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="left">
-      <h1>Beauty services at your doorstep</h1>
-
-      <div class="service-box">
-        <h3>What are you looking for?</h3>
-        <div class="services-grid">
-          <a href="salon_for_women.html" class="service-card-link">
-            <div class="service-card">
-                <img src="1672324465583-2688a9.webp" alt="Salon for Women" />
-                <p>Salon for Women</p>
-            </div>
-        </a>
-        <a href="spa_for_women.html" class="service-card-link">
-          <div class="service-card">
-              <img src="1673936988512-276a19.webp" alt="Spa for Women" />
-              <p>Spa for Women</p>
-          </div>
-      </a>  
-      <a href="hairstud_women.html" class="service-card-link">
-      <div class="service-card">
-            <img src="1728839468364-90b0dc.webp" alt="Hair Studio for Women" />
-            <p>Hair Studio Women</p>
-          </div>
-      </a>
-      <a href="makeupstyling_studio.html" class="service-card-link">
-          <div class="service-card">
-            <img src="1669023257508-ffd582.webp" alt="Makeup & Styling" />
-            <p>Makeup & Styling </p>
-          </div>
-          </a>
-          <a href="salonfor_men.html" class="service-card-link">
-          <div class="service-card">
-            <img src="1677505426782-4e2d0a.webp" alt="Salon for Men" />
-            <p>Salon for Men</p>
-          </div>
-          </a>
-          <a href="massage_men.html" class="service-card-link">
-          <div class="service-card">
-            <img src="1674623814769-eeca92.webp" alt="Massage for Men" />
-            <p>Massage for Men</p>
-          </div>
-          </a>
-          <a href="baby.html" class="service-card-link">
-            <div class="service-card">
-              <img src="1673936988512-276a19.webp" alt="Massage for Men" />
-              <p>Baby Care & Massage</p>
-            </div>
-          </a>
-          
-        </div>
-      </div>
-
-      <div class="ratings">
-        <div>
-          <p class="icon">⭐</p>
-          <p><strong>4.8</strong><br />Service Rating*</p>
-        </div>
-        <div>
-          <p class="icon">👥</p>
-          <p><strong>12M+</strong><br />Customers Globally*</p>
-        </div>
-      </div>
-    </div>
-
-   <div class="img00">
-    <img src="1719293199714-da733e (1).webp" width="600px" height="600px">
-   </div> 
-   </div>
-
- 
-   <div class="wrapper">
-    <section class="babycare-section">
-      <h1>🍼 BabyCare & Massages (3 Months – 2 Years)</h1>
-      <p class="tagline">Gentle care for your little one, by certified baby massage professionals.</p>
-    
-     
-      <div class="scroll-container">
-        
-        <div class="service-cardis">
-          <img src="baby.jpg" alt="Coconut Oil Massage">
-          <div class="card-contentis">
-            <h3>🌴 Coconut Oil Massage</h3>
-            <p class="desc">Soothes skin, promotes better sleep & hydration.</p>
-            <p><strong>Duration:</strong> 30 mins</p>
-            <p><strong>Price:</strong> ₹499</p>
-            <div class="ratings">⭐ 4.8 (212 reviews)</div>
-            <button onclick="openBooking('Coconut Oil Massage')">Book Now</button>
-          </div>
-        </div>
-    
-        <div class="service-cardis">
-          <img src="full.jpg" alt="Ayurvedic Massage">
-          <div class="card-contentis">
-            <h3>🌿 Ayurvedic Full Body</h3>
-            <p class="desc">Boosts growth, digestion & immunity using ayurvedic oil.</p>
-            <p><strong>Duration:</strong> 45 mins</p>
-            <p><strong>Price:</strong> ₹649</p>
-            <div class="ratings">⭐ 4.9 (184 reviews)</div>
-            <button onclick="openBooking('Ayurvedic Full Body')">Book Now</button>
-          </div>
-        </div>
-    
-        <div class="service-cardis">
-          <img src="mom&baby.jpg" alt="Mom and Baby Combo">
-          <div class="card-contentis">
-            <h3>👩‍👧 Mom & Baby Combo</h3>
-            <p class="desc">Relaxing session for both – bonding + wellness therapy.</p>
-            <p><strong>Duration:</strong> 60 mins</p>
-            <p><strong>Price:</strong> ₹999</p>
-            <div class="ratings">⭐ 5.0 (320 reviews)</div>
-            <button onclick="openBooking('Mom & Baby Combo')">Book Now</button>
-          </div>
-        </div>
-    
-        
-        <div class="service-cardis">
-          <img src="head.jpg" alt="Head Massage">
-          <div class="card-contentis">
-            <h3>🧠 Soothing Head Massage</h3>
-            <p class="desc">Improves baby sleep & calms the mind.</p>
-            <p><strong>Duration:</strong> 20 mins</p>
-            <p><strong>Price:</strong> ₹399</p>
-            <div class="ratings">⭐ 4.7 (165 reviews)</div>
-            <button onclick="openBooking('Soothing Head Massage')">Book Now</button>
-          </div>
-        </div>
-    
-        <div class="service-cardis">
-          <img src="foot.jpg" alt="Foot Therapy">
-          <div class="card-contentis">
-            <h3>🦶 Leg & Foot Therapy</h3>
-            <p class="desc">Supports mobility and healthy development.</p>
-            <p><strong>Duration:</strong> 25 mins</p>
-            <p><strong>Price:</strong> ₹429</p>
-            <div class="ratings">⭐ 4.6 (142 reviews)</div>
-            <button onclick="openBooking('Leg & Foot Therapy')">Book Now</button>
-          </div>
-        </div>
-    
-        <div class="service-cardis">
-          <img src="hrbal.jpg" alt="Herbal Massage">
-          <div class="card-contentis">
-            <h3>🌼 Herbal Warm Oil</h3>
-            <p class="desc">Gentle detox & seasonal protection.</p>
-            <p><strong>Duration:</strong> 30 mins</p>
-            <p><strong>Price:</strong> ₹579</p>
-            <div class="ratings">⭐ 4.9 (110 reviews)</div>
-            <button onclick="openBooking('Herbal Warm Oil')">Book Now</button>
-          </div>
-        </div>
-    
-        <div class="service-cardis">
-          <img src="winter.jpg" alt="Winter Therapy">
-          <div class="card-contentis">
-            <h3>❄️ Winter Skin Therapy</h3>
-            <p class="desc">Prevents dryness in cold weather.</p>
-            <p><strong>Duration:</strong> 35 mins</p>
-            <p><strong>Price:</strong> ₹499</p>
-            <div class="ratings">⭐ 4.8 (198 reviews)</div>
-            <button onclick="openBooking('Winter Skin Therapy')">Book Now</button>
-          </div>
-        </div>
-    
-        <div class="service-cardis">
-          <img src="relax.jpg" alt="Evening Relaxation">
-          <div class="card-contentis">
-            <h3>🌙 Evening Relaxation</h3>
-            <p class="desc">Perfect bedtime prep with calming oils.</p>
-            <p><strong>Duration:</strong> 30 mins</p>
-            <p><strong>Price:</strong> ₹499</p>
-            <div class="ratings">⭐ 5.0 (176 reviews)</div>
-            <button onclick="openBooking('Evening Relaxation')">Book Now</button>
-          </div>
-        </div>
-      </div>
-    
-    
-      <div class="modal" id="bookingModal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeBooking()">&times;</span>
-          <h2>Book <span id="serviceName">Massage</span></h2>
-          <form onsubmit="event.preventDefault(); alert('Booking Confirmed!')">
-            <label>Baby's Age (in months):</label>
-            <input type="number" min="3" max="24" required>
-    
-            <label>Date & Time:</label>
-            <input type="datetime-local" required>
-    
-            <label>Parent's Name:</label>
-            <input type="text" required>
-    
-            <label>Contact Number:</label>
-            <input type="tel" required>
-    
-            <label><input type="checkbox" /> Add Memory Capture (₹99)</label>
-    
-            <button type="submit">Confirm Booking</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <br> <br>
-
-   <div class="card-container">
-    <div class="card red-card">
-      <div class="text">
-        <h2>Perfect look with <br><span>Rica & O3+</span></h2>
-        <p>Waxing & facials</p>
-        <a href="salon_for_women.html" > <button>Book now</button></a>
-      </div>
-     
-    </div>
-
-    <div class="card green-card">
-      <div class="text">
-        <h2>Relax & rejuvenate <br>at home</h2>
-        <p>Spa for women</p>
-        <a href="spa_for_women.html" > <button>Book now</button></a>
-      </div>
-      
-    </div>
-
-    <div class="card black-card">
-      <div class="text">
-        <h2>Relax & rejuvenate <br>at home</h2>
-        <p>Massage for men</p>
-        <a href="massage_men.html" > <button>Book now </button></a>
-      </div>
-      
-    </div>
-
-    <div class="card blue-card">
-      <div class="text">
-        <h2> Expert haircut <br> & starting at *199</h2>
-        <p> Haircut at home </p>
-        <a href="salonfor_men.html" > <button>Book now</button></a>
-      </div>
-     
-    </div>
-
-
-    <div class="card redi-card">
-      <div class="text">
-        <h2>Perfect look with <br><span>Rica & O3+</span></h2>
-        <p>Waxing & facials</p>
-        <a href="salon_for_women.html" > <button>Book now</button></a>
-      </div>
-      
-    </div>
-  </div>
-<br> <br>
-
-  <h2 class="section-title">Most booked services</h2>
-<div class="service-wrapper">
-  <div class="service-container">
-    <div class="service-cardd">
-      <a href="spa_for_women.html" ><img src="Screenshot 2025-06-07 at 1.43.00 PM.png" alt="Massage 1" /></a>
-      <h3>Deep tissue pain relief massage</h3>
-      <p>⭐ 4.83 (115K)</p>
-      <p>₹1,448</p>
-    </div>
-    <div class="service-cardd">
-      <a href="spa_for_women.html" ><img src="Screenshot 2025-06-07 at 1.43.09 PM.png" alt="Massage 2" /></a>
-      <h3>Swedish stress relief massage</h3>
-      <p>⭐ 4.84 (176K)</p>
-      <p>₹1,299</p>
-    </div>
-    <div class="service-cardd">
-      <a href="massage_men.html" > <img src="Screenshot 2025-06-07 at 1.43.16 PM.png" alt="Massage 3" /></a>
-      <h3>Deep tissue healing therapy</h3>
-      <p>⭐ 4.90 (36K)</p>
-      <p>₹2,049</p>
-    </div>
-    <div class="service-cardd">
-      <a href="hairstud_women.html" > <img src="Screenshot 2025-06-07 at 1.43.23 PM.png" alt="Hair Styling" /></a>
-      <h3>In curl/out curl blow-dry</h3>
-      <p>⭐ 4.82 (40K)</p>
-      <p>₹399</p>
-    </div>
-    <div class="service-cardd">
-      <a href="hairstud_women.html" > <img src="Screenshot 2025-06-07 at 1.44.01 PM.png" alt="Massage 4" /></a>
-      <h3>Straight & smooth blow-Dry</h3>
-      <p>⭐ 4.86 (42K)</p>
-      <p>₹1,399</p>
-    </div>
-    <div class="service-cardd">
-      <a href="massage_men.html" > <img src="Screenshot 2025-06-07 at 1.43.54 PM.png" alt="Hair Styling" /></a>
-      <h3>Deep tissue pain relief massage</h3>
-      <p>⭐ 4.92 (84K)</p>
-      <p>₹399</p>
-    </div>
-    <div class="service-cardd">
-      <a href="salon_for_women.html" ><img src="Screenshot 2025-06-07 at 1.44.11 PM.png" alt="Hair Styling" /></a>
-      <h3>Hair Trim </h3>
-      <p>⭐ 4.82 (40K)</p>
-      <p>₹599</p>
-    </div>
-    <div class="service-cardd">
-      <a href="spa_for_women.html" > <img src="Screenshot 2025-06-07 at 1.44.18 PM.png" alt="Hair Styling" /></a>
-      <h3>L'Oreal hair Spa</h3>
-      <p>⭐ 4.82 (9K)</p>
-      <p>₹1,999</p>
-    </div>
-
-  </div>
-</div>
-<br> <br>
-<div class="salon-wrapper">
-  <div class="salon-header">
-    <h2>Salon for women</h2>
-    <a href="salon_for_women.html" class="see-all">See all</a>
-  </div>
-  <div class="salon-container">
-    <div class="salon-card">
-      <a href="salon_for_women.html" > <img src="Screenshot 2025-06-08 at 3.25.36 PM.png" alt="Waxing"></a>
-     
-    </div>
-    <div class="salon-card">
-      <a href="salon_for_women.html" ><img src="Screenshot 2025-06-08 at 8.45.27 PM.png" alt="Threading"></a>
-    
-    </div>
-    <div class="salon-card">
-      <a href="salon_for_women.html" > <img src="Screenshot 2025-06-08 at 8.45.35 PM.png" alt="Facial"></a>
-      
-    </div>
-    <div class="salon-card">
-      <a href="salon_for_women.html" > <img src="Screenshot 2025-06-08 at 8.45.45 PM.png" alt="Manicure"></a>
-     
-    </div>
-    <div class="salon-card">
-      <a href="salon_for_women.html" >   <img src="Screenshot 2025-06-08 at 8.46.06 PM.png" alt="Pedicure"> </a>
-     
-    </div>
-    <div class="salon-card">
-      <a href="salon_for_women.html" >  <img src="Screenshot 2025-06-08 at 8.46.13 PM.png" alt="Bleach & Detan"> </a>
-      
-    </div>
-    <div class="salon-card">
-      <a href="salon_for_women.html" >    <img src="Screenshot 2025-06-08 at 8.46.19 PM.png" alt="Hair Care"> </a>
-      
-    </div>
-  </div>
-</div>
-
-<br><br><br><br>
-<div class="rollon-card">
-  <div class="rollon-text">
-    <h4>Roll-on <br> Waxing</h4><br>
-    <h2>Roll-on with style</h2>
-    <p>Waxing that's smooth, painless &<br> mess-free</p>
-    <a href="salon_for_women.html" > <button>Explore now</button> </a>
-  </div>
-  <div class="rollon-img">
-    <img src="Screenshot 2025-06-07 at 1.22.26 PM.png" alt="Roll-on Waxing">
-  </div>
-</div>
-
-<section class="spa-women-section">
-  <div class="spa-header">
-    <h2>Spa for women</h2>
-    <p>Refresh. Rewind. Rejuvenate.</p>
-  </div>
-  <div class="spa-cards">
-    <div class="spa-card">
-      
-      <a href="spa_for_women.html" > <img src="Screenshot 2025-06-08 at 3.58.19 PM.png" alt="Pain relief"></a>
-    </div>
-    <div class="spa-card">
-      
-      <a href="spa_for_women.html" >    <img src="Screenshot 2025-06-08 at 8.52.51 PM.png" alt="Stress relief"> </a>
-    </div>
-    <div class="spa-card">
-   
-      <a href="spa_for_women.html" >  <img src="Screenshot 2025-06-08 at 8.52.58 PM.png" alt="Natural skincare"> </a>
-    </div>
-  </div>
-</section>
-
-<section class="hair-nail-section">
-  <div class="hair-nail-header">
-    <div>
-      <h2>Hair & Nail services</h2>
-      <p>Refreshed style, revamped look</p>
-    </div>
-    <a href="salon_for_women.html" class="see-all">See all</a>
-  </div>
-
-  <div class="hair-nail-grid">
-
-    <div class="hn-card">
-      <a href="hairstud_women.html" ><img src="Screenshot 2025-06-08 at 4.01.35 PM.png" alt="In curl/out curl blow-dry"></a>
-      <h4>In curl/out curl blow-dry</h4>
-      <p>⭐ 4.82 (40K)</p>
-      <p>₹399</p>
-    </div>
-   
-    <div class="hn-card">
-      <a href="hairstud_women.html" > <img src="Screenshot 2025-06-08 at 4.02.20 PM.png" alt="Straight & smooth blow-dry"> </a>
-      <h4>Straight & smooth blow-dry</h4>
-      <p>⭐ 4.87 (42K)</p>
-      <p>₹399</p>
-    </div>
-    
-    <div class="hn-card">
-      <a href="hairstud_women.html" >   <img src="Screenshot 2025-06-07 at 1.44.11 PM.png" alt="Hair trim"> </a>
-      <h4>Hair trim</h4>
-      <p>⭐ 4.83 (28K)</p>
-      <p>₹449</p>
-    </div>
-   
-    <div class="hn-card">
-      <a href="hairstud_women.html" >    <img src="Screenshot 2025-06-07 at 1.44.18 PM.png" alt="L'Oreal hair spa"> </a>
-      <h4>L'Oreal hair spa</h4>
-      <p>⭐ 4.82 (9K)</p>
-      <p>₹1,299</p>
-    </div>
-  </div>
-</section>
-
- <section class="spa-women-sectionn"> 
-  <div class="spa-cardd">
-   <div class="spa-textt"> 
-      <h3>SPA <span>for</span><br>WOMEN</h3>
-      <h1>Relax, recharge,<br>rejuvenate</h1>
-      <a href="spa_for_women.html" class="explore-btn">Explore now</a>
-    </div> 
-    <div class="spa-imgg">
-      <img src="Screenshot 2025-06-08 at 4.06.09 PM.png" alt="Spa for Women">
-    </div>
-  </div>
-</section>
-
-
-<section class="salon-section">
-  <h2>Salon for men</h2>
-  <p>Grooming essentials</p>
-
-  <div class="card-containers">
-    <div class="cards">
-     
-      <a href="salonfor_men.html" >   <img src="Screenshot 2025-06-08 at 4.19.12 PM.png" alt="Haircut & beard styling"> </a>
-    </div>
-    <div class="cards">
-      
-      <a href="salonfor_men.html" >   <img src="Screenshot 2025-06-08 at 8.55.01 PM.png" alt="Pedicure & Manicure"> </a>
-    </div>
-    <div class="cards">
-     
-      <a href="salonfor_men.html" >    <img src="Screenshot 2025-06-08 at 8.55.07 PM.png" alt="Hair color & Hair spa"> </a>
-    </div>
-    <div class="cards">
-      
-      <a href="salonfor_men.html" >     <img src="Screenshot 2025-06-08 at 8.55.14 PM.png" alt="Facial & cleanup"> </a>
-    </div>
-  </div>
-</section>
-
-<div class="rollon-cards">
-  <div class="rollon-textt">
-    <h4>MASSAGE <br> FOR MEN</h4><br>
-    <h2>Indulge with<br>Ayurvedic massage at home</h2>
-    
-    <a href="massage_men.html" >  <button>Explore now</button> </a>
-  </div>
-  <div class="rollon-imgg">
-    <img src="Screenshot 2025-06-08 at 4.41.15 PM.png" alt="Roll-on Waxing">
-  </div>
-</div>
-
-<section class="salon-section">
-  <h2>Massage for men</h2>
-  <p>Curated massages by top therapists.</p>
-
-  <div class="card-containers">
-    <div class="cards">
-         
-      <a href="massage_men.html" >    <img src="Screenshot 2025-06-08 at 4.52.12 PM.png" alt="Pain Relief"> </a>
-    </div>
-    <div class="cards">
-      
-      <a href="massage_men.html" >    <img src="Screenshot 2025-06-08 at 8.55.24 PM.png" alt="Post Workout"></a>
-    </div>
-    <div class="cards">
-     
-      <a href="massage_men.html" >   <img src="Screenshot 2025-06-08 at 8.55.33 PM.png" alt="Stress Relief"></a>
-    </div>
-   
-  </div>
-</section>
-
-
-
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <img src="Screenshot 2025-06-07 at 10.24.55 AM.png" alt="Urban Company Logo">
-    </div>
-
-    
-    <div class="footer-sections">
-      <div class="footer-column">
-        <h4>Company</h4>
-        <ul>
-          <li>About us</li>
-          <li>Investor Relations</li>
-          <li>Terms & conditions</li>
-          <li>Privacy policy</li>
-          <li>Anti-discrimination policy</li>
-          <li>ESG Impact</li>
-          <li>Careers</li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>For customers</h4>
-        <ul>
-          <li>UC reviews</li>
-          <li>Categories near you</li>
-          <li>Contact us</li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>For professionals</h4>
-        <ul>
-          <li>Register as a professional</li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Social links</h4>
-        <div class="social-icons">
-          <a href="https://twitter.com/urbancompany_UC" >   <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"> </a>
-          <a href="https://www.facebook.com/UrbanCompany/" >      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"> </a>
-            <a href="https://www.instagram.com/urbancompany/" >    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"> </a>
-              <a href="https://www.linkedin.com/company/urbancompany/" >   <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"> </a>
-        </div>
-        <div class="store-buttons">
-         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"> 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>* As on December 31, 2024</p>
-    <p>© Copyright 2025 Urban Company Ltd. (formerly known as UrbanClap Technologies India Limited and UrbanClap Technologies India India Limited) All rights reserved. | CIN: U74140DL2014PTC274413</p>
-  </div>
-</footer>
-
-
-  
-<script src="script.js"></script>
-   
-
+    <div class="progress-bar"></div>
+  </div> </a>
 </body>
+<script>
+    setTimeout(() => {
+      window.location.href = "login.html"; // Replace with your actual home page
+    }, 2500); // 2.5 seconds
+  </script>
+  
 </html>
