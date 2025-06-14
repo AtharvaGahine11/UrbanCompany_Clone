@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UC - Payment & Delivery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .checkout-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, label {
+      display: block;
+      width: 100%;
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .radio-group {
+      margin-top: 10px;
+    }
+
+    .radio-option {
+      margin-bottom: 10px;
+    }
+
+    .extra-inputs {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .cart-summary {
+      background: #f9f9f9;
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 12px;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      padding: 14px;
+      background: #e7ffe7;
+      border: 1px solid #bdf0bd;
+      color: green;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 8px;
+      display: none;
+    }
+
+    #map {
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 12px;
+      display: none;
+      overflow: hidden;
+    }
+
+    iframe {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-box">
+    <h2>Review & Payment</h2>
+
+    <div class="cart-summary" id="cartSummary">
+      <strong>Cart Summary</strong>
+      <div id="cartItems"></div>
+      <hr />
+      <div class="cart-item">
+        <span>Total</span>
+        <strong id="totalAmount">₹0</strong>
+      </div>
+    </div>
+
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Atharva Gahine" />
+
+    <label>Phone</label>
+    <input type="text" id="phone" placeholder="9876543210" />
+
+    <label>Address</label>
+    <input type="text" id="address" placeholder="Dadar, Mumbai" />
+
+    <label>Payment Method</label>
+    <div class="radio-group">
+      <div class="radio-option">
+        <input type="radio" name="payment" value="card" id="cardRadio">
+        <label for="cardRadio">💳 Credit / Debit Card</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="payment" value="upi" id="upiRadio">
+        <label for="upiRadio">📱 UPI</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="payment" value="cod" id="codRadio">
+        <label for="codRadio">💵 Cash on Delivery</label>
+      </div>
+    </div>
+
+    <div id="cardInputs" class="extra-inputs">
+      <input type="text" placeholder="Card Number" />
+      <input type="text" placeholder="Expiry (MM/YY)" />
+      <input type="number" placeholder="CVV" />
+    </div>
+
+    <div id="upiInput" class="extra-inputs">
+      <input type="text" placeholder="UPI ID (e.g. atharva@upi)" />
+    </div>
+
+    <button class="checkout-btn" onclick="placeOrder()">Place Order</button>
+
+    <div class="confirmation" id="confirmation"></div>
+
+    <div id="map"></div>
+  </div>
+
+  <script>
+    const cardRadio = document.getElementById("cardRadio");
+    const upiRadio = document.getElementById("upiRadio");
+    const codRadio = document.getElementById("codRadio");
+    const cardInputs = document.getElementById("cardInputs");
+    const upiInput = document.getElementById("upiInput");
+    const mapDiv = document.getElementById("map");
+
+    function resetPaymentFields() {
+      cardInputs.style.display = "none";
+      upiInput.style.display = "none";
+    }
+
+    cardRadio.addEventListener("change", () => {
+      resetPaymentFields();
+      cardInputs.style.display = "block";
+    });
+
+    upiRadio.addEventListener("change", () => {
+      resetPaymentFields();
+      upiInput.style.display = "block";
+    });
+
+    codRadio.addEventListener("change", resetPaymentFields);
+
+    // Simulated cart
+    const cart = JSON.parse(localStorage.getItem("cart")) || [
+      { name: "Hair Spa", price: 699 },
+      { name: "Glow Facial", price: 499 }
+    ];
+
+    function loadCart() {
+      const cartContainer = document.getElementById("cartItems");
+      const totalElement = document.getElementById("totalAmount");
+      let total = 0;
+      cartContainer.innerHTML = "";
+
+      cart.forEach(item => {
+        total += item.price;
+        cartContainer.innerHTML += `
+          <div class="cart-item">
+            <span>${item.name}</span>
+            <span>₹${item.price}</span>
+          </div>`;
+      });
+
+      totalElement.textContent = "₹" + total;
+    }
+
+    function placeOrder() {
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const payment = document.querySelector('input[name="payment"]:checked');
+
+      if (!name || !phone || !address || !payment) {
+        alert("Please fill all fields and choose a payment method.");
+        return;
+      }
+
+      const confirmation = document.getElementById("confirmation");
+      confirmation.innerHTML = `✅ Order confirmed for ${name}<br>We are on the way...`;
+      confirmation.style.display = "block";
+      mapDiv.style.display = "block";
+
+      loadMap();
+    }
+
+    function loadMap() {
+      const mapFrame = document.createElement("iframe");
+      mapFrame.width = "100%";
+      mapFrame.height = "100%";
+      mapFrame.style.border = "0";
+      mapFrame.loading = "lazy";
+      mapFrame.allowFullscreen = true;
+
+    
+      const origin = "Chhatrapati+Shivaji+Terminus,Mumbai";
+      const destination = "Dadar,Mumbai";
+      mapFrame.src = "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d65946.98112039106!2d72.79908808082813!3d18.980444610164902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3be7ce27b8aa3bdf%3A0x21434b0703218d1b!2sChhatrapati%20Shivaji%20Terminus%2C%20Chhatrapati%20Shivaji%20Terminus%20Area%2C%20Fort%2C%20Mumbai%2C%20Maharashtra!3m2!1d18.9398446!2d72.8354475!4m5!1s0x3be7cedb0ea0cd0f%3A0x428a465039995bd0!2sDadar%2C%20Mumbai%2C%20Maharashtra!3m2!1d19.0177989!2d72.84781199999999!5e1!3m2!1sen!2sin!4v1749884884963!5m2!1sen!2sin";
+
+      mapDiv.innerHTML = "";
+      mapDiv.appendChild(mapFrame);
+    }
+
+    loadCart();
+  </script>
+
+</body>
+</html>

@@ -34,8 +34,45 @@
         <input type="text" placeholder="Search for ‘Waxing’" />
       </div>
 
-      <i class="fas fa-shopping-cart icon"></i>
-      <i class="fa-solid fa-user" style="color: #000000;"></i>
+    
+        <div class="cart-wrapper">
+          <div class="cart-icon" id="cartToggle">🛒</div>
+          <div class="cart-dropdown" id="cartDropdown">
+            <h4>My Cart</h4>
+            <div class="cart-items" id="cartItems">
+              <div class="cart-item">
+                <p>Hair Spa</p>
+                <span>₹699</span>
+              </div>
+              <div class="cart-item">
+                <p>Facial Glow</p>
+                <span>₹499</span>
+              </div>
+            </div>
+            <div class="cart-total">
+              <p>Total</p>
+              <strong>₹1198</strong>
+            </div>
+            <a href="checkout.html"><button class="checkout-btn">Proceed to Checkout</button> </a>
+          </div>
+        </div>
+        
+        <div class="profile-wrapper">
+          <div class="profile-icon" id="profileToggle">👤</div>
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="profile-header">
+              <strong>Atharva Gahine</strong>
+              <p>atharva@email.com</p>
+            </div>
+            <ul class="profile-options">
+              <li>🧾 My Bookings</li>
+              <li>💰 My Wallet</li>
+              <li>🏠 Saved Addresses</li>
+              <li>🛟 Help & Support</li>
+              <li class="logout">🚪 Logout</li>
+            </ul>
+          </div>
+        </div>
     </div>
   </nav>
 
